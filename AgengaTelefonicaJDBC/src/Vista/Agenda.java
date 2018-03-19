@@ -87,7 +87,7 @@ public class Agenda extends JFrame {
         setResizable(false);
         navigatePanel.setLayout(
                 new BoxLayout(navigatePanel, BoxLayout.X_AXIS));
-        previousButton.setText("Previous");
+        previousButton.setText("Previo");
         previousButton.setEnabled(false);
         previousButton.addActionListener(
                 new ActionListener() {
@@ -113,7 +113,7 @@ public class Agenda extends JFrame {
         ); // end call to addActionListener
         navigatePanel.add(indexTextField);
         navigatePanel.add(Box.createHorizontalStrut(10));
-        ofLabel.setText("of");
+        ofLabel.setText("de");
         navigatePanel.add(ofLabel);
         navigatePanel.add(Box.createHorizontalStrut(10));
         maxTextField.setHorizontalAlignment(
@@ -121,7 +121,7 @@ public class Agenda extends JFrame {
         maxTextField.setEditable(false);
         navigatePanel.add(maxTextField);
         navigatePanel.add(Box.createHorizontalStrut(10));
-        nextButton.setText("Next");
+        nextButton.setText("Siguiente");
         nextButton.setEnabled(false);
         nextButton.addActionListener(
                 new ActionListener() {
@@ -133,34 +133,34 @@ public class Agenda extends JFrame {
         navigatePanel.add(nextButton);
         add(navigatePanel);
         displayPanel.setLayout(new GridLayout(5, 2, 4, 4));
-        idLabel.setText("Address ID:");
+        idLabel.setText("ID:");
         displayPanel.add(idLabel);
         idTextField.setEditable(false);
         displayPanel.add(idTextField);
-        firstNameLabel.setText("First Name:");
+        firstNameLabel.setText("Nombre:");
         displayPanel.add(firstNameLabel);
         displayPanel.add(firstNameTextField);
-        lastNameLabel.setText("Last Name:");
+        lastNameLabel.setText("Apellido:");
         displayPanel.add(lastNameLabel);
         displayPanel.add(lastNameTextField);
         emailLabel.setText("Email:");
         displayPanel.add(emailLabel);
         displayPanel.add(emailTextField);
-        phoneLabel.setText("Phone Number:");
+        phoneLabel.setText("Numero Tel.:");
         displayPanel.add(phoneLabel);
         displayPanel.add(phoneTextField);
         add(displayPanel);
         queryPanel.setLayout(
                 new BoxLayout(queryPanel, BoxLayout.X_AXIS));
         queryPanel.setBorder(BorderFactory.createTitledBorder(
-                "Find an entry by last name"));
-        queryLabel.setText("Last Name:");
+                "Buscar una Persona por su apellido"));
+        queryLabel.setText("Apellido:");
         queryPanel.add(Box.createHorizontalStrut(5));
         queryPanel.add(queryLabel);
         queryPanel.add(Box.createHorizontalStrut(10));
         queryPanel.add(queryTextField);
         queryPanel.add(Box.createHorizontalStrut(10));
-        queryButton.setText("Find");
+        queryButton.setText("Buscar");
         queryButton.addActionListener(
                 new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -171,7 +171,7 @@ public class Agenda extends JFrame {
         queryPanel.add(queryButton);
         queryPanel.add(Box.createHorizontalStrut(5));
         add(queryPanel);
-        browseButton.setText("Browse All Entries");
+        browseButton.setText("Buscar todas las personas");
         browseButton.addActionListener(
                 new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -181,7 +181,7 @@ public class Agenda extends JFrame {
         ); // end call to addActionListener
 
         add(browseButton);
-        insertButton.setText("Insert New Entry");
+        insertButton.setText("Insertar nueva Persona");
         insertButton.addActionListener(
                 new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -288,10 +288,10 @@ public class Agenda extends JFrame {
                 lastNameTextField.getText(), emailTextField.getText(),
                 phoneTextField.getText());
         if (result == 1) {
-            JOptionPane.showMessageDialog(this, "Person added!",
+            JOptionPane.showMessageDialog(this, "Person agregada!",
                     "Person added", JOptionPane.PLAIN_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(this, "Person not added!",
+            JOptionPane.showMessageDialog(this, "Persona no agregada!",
                     "Error", JOptionPane.PLAIN_MESSAGE);
         }
         browseButtonActionPerformed(evt);
